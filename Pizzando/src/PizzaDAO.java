@@ -36,7 +36,7 @@ public class PizzaDAO {
                 String nome = rs.getString(2);
                 Double preco = rs.getDouble(3);
                 String sabor = rs.getString(4);
-                Pizza p = new Pizza(nome, preco, sabor, id); //linha maldita dando erro
+                Pizza p = new Pizza(id, nome, preco, sabor);
                 return p;
             }
             conn.close();
