@@ -87,7 +87,7 @@ public class PizzaDAO {
     public int Delete(int id){
         try{
             Connection conn = Conexao.conectar();
-            PreparedStatement ps = conn.prepareStatement("DELETE Pizza SET preco = ?, sabor = ? WHERE cod_pizza = ?");
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM Pizza WHERE cod_pizza = ?");
 
             ps.setInt(1,id);
 
