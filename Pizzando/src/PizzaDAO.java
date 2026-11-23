@@ -35,7 +35,7 @@ public class PizzaDAO {
             if(rs.next()){
                 Double preco = rs.getDouble(2);
                 String sabor = rs.getString(3);
-                Pizza p = new Pizza(id, preco, sabor);
+                Pizza p = new Pizza(id, sabor, preco);
                 return p;
             }
             conn.close();
