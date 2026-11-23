@@ -56,7 +56,7 @@ public class PizzaDAO {
                 int id = rs.getInt(1);
                 Double preco = rs.getDouble(2);
                 String sabor = rs.getString(3);
-                Pizza p = new Pizza(id,preco,sabor);
+                Pizza p = new Pizza(id,sabor,preco);
                 pizzaArrayList.add(p);
             }
             conn.close();
