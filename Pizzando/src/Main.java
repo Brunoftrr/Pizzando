@@ -1,3 +1,3 @@
 void main(String[] args) {
-    new Tela();
+    new TelaLogin();
 }

@@ -1,10 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class Tela extends JFrame {
-    public Tela() {
+public class TelaPrincipal extends JFrame {
+    public TelaPrincipal() {
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(500,400);
+        setLocationRelativeTo(null);
+        setTitle("Pizzando - Fazer pedido");
+
         JPanel border = new JPanel();
         border.setLayout(new BorderLayout());
 
@@ -24,14 +28,11 @@ public class Tela extends JFrame {
         add(border);
 
         setVisible(true);
-        setSize(500,400);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        ver_produtos.addActionListener(new ActionListener() {
+        entregar_pedido.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new TelaProdutos();
+                new EntregarTela();
             }
         });
     }
