@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TelaPrincipal extends JFrame {
     public TelaPrincipal() {
@@ -29,6 +30,12 @@ public class TelaPrincipal extends JFrame {
 
         setVisible(true);
 
+        adicionar_produto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new TelaAdicionar();
+            }
+        });
         entregar_pedido.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
